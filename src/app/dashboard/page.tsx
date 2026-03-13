@@ -14,7 +14,7 @@ const GRAFANA_STATS: { title: string; url: string }[] = [
 
 const GRAFANA_GRAPHS: { title: string; url: string }[] = [
   { title: "CPU Usage",       url: `${GRAFANA_BASE}&panelId=panel-77` },
-  { title: "Memory Usage",    url: `${GRAFANA_BASE}&panelId=panel-78` },
+  { title: "Memory Usage",    url: `${GRAFANA_BASE}&panelId=panel-78&kiosk` },
   { title: "Network Traffic", url: `${GRAFANA_BASE}&panelId=panel-74` },
 ];
 
