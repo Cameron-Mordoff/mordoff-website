@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import PrintButton from "@/components/PrintButton";
+
+export const metadata: Metadata = {
+  title: "Resume — Cameron Mordoff",
+  description: "Resume of Cameron Mordoff, Senior Systems Administrator specializing in Microsoft Intune, Jamf, PowerShell, Entra ID, and enterprise endpoint management.",
+};
 
 const EXPERIENCE = [
   {
@@ -100,8 +106,14 @@ const EDUCATION = [
 ];
 
 const CERTIFICATIONS = [
-  "Microsoft Certified: Azure Fundamentals (Jan 2025)",
-  "Microsoft 365 Certified: Fundamentals (Jan 2025)",
+  {
+    label: "Microsoft Certified: Azure Fundamentals (Jan 2025)",
+    url: "https://learn.microsoft.com/api/credentials/share/en-us/Cameron-Mordoff/48974F380370D2E4?sharingId=594E2B6298055279",
+  },
+  {
+    label: "Microsoft 365 Certified: Fundamentals (Jan 2025)",
+    url: "https://learn.microsoft.com/api/credentials/share/en-us/Cameron-Mordoff/8CB0593091AD06AF?sharingId=594E2B6298055279",
+  },
 ];
 
 export default function ResumePage() {
@@ -225,7 +237,14 @@ export default function ResumePage() {
                 {CERTIFICATIONS.map((cert, i) => (
                   <li key={i} className="flex gap-2 text-slate-600 dark:text-slate-300 print:text-slate-700 text-sm">
                     <span className="text-cyan-500 print:text-slate-400 shrink-0">▸</span>
-                    {cert}
+                    <a
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors underline underline-offset-2 decoration-slate-300 dark:decoration-slate-600 hover:decoration-cyan-500"
+                    >
+                      {cert.label}
+                    </a>
                   </li>
                 ))}
               </ul>

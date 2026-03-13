@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dashboard — Cameron Mordoff",
+  description: "Live homelab metrics and server stats for Cameron Mordoff's home server.",
+};
+
 // ─── Update these URLs to your actual services ───────────────────────────────
 const GRAFANA_URL = "https://grafana.mordoff.com";
 

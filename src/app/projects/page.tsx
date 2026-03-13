@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects — Cameron Mordoff",
+  description: "Projects and homelab work by Cameron Mordoff.",
+};
+
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen flex items-center justify-center">

@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 export const metadata: Metadata = {
   title: "Cameron Mordoff — Systems Administrator",
   description: "Senior Systems Administrator with 7+ years of experience in endpoint management, automation, and infrastructure. Specializing in Microsoft Intune, Jamf, PowerShell, and Azure.",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.svg" },
   openGraph: {
     title: "Cameron Mordoff — Systems Administrator",
     description: "Senior Systems Administrator with 7+ years of experience in endpoint management, automation, and infrastructure.",
