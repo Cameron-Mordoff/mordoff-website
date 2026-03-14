@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const GRAFANA_URL = "https://grafana.mordoff.com";
 
-const GRAFANA_BASE = "https://grafana.mordoff.com/d-solo/ad995jn/unraid-overview?orgId=1&from=now-1h&to=now&timezone=browser&var-ds_prometheus=bfcspkzyrfchsb&var-job=unraid&var-nodename=Andromeda&var-node=192.168.1.10:9100&refresh=1m&theme=dark";
+const GRAFANA_BASE = "https://grafana.mordoff.com/d-solo/ad995jn/unraid-overview?orgId=1&from=now-1h&to=now&timezone=browser&var-ds_prometheus=bfcspkzyrfchsb&var-job=unraid&var-nodename=Andromeda&refresh=1m&theme=dark";
 
 const GRAFANA_STATS: { title: string; url: string }[] = [
   { title: "CPU Busy", url: `${GRAFANA_BASE}&panelId=panel-20&kiosk` },
