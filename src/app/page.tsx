@@ -11,15 +11,19 @@ export const metadata: Metadata = {
 const SKILL_GROUPS = [
   {
     category: "Endpoint & Identity",
-    skills: ["Microsoft Intune", "Windows Autopilot", "Jamf", "Entra ID (Azure AD)", "Microsoft 365", "Exchange Online", "Group Policy (GPO)"],
+    skills: ["Microsoft Intune", "Windows Autopilot", "Jamf", "Entra ID (Azure AD)", "Microsoft 365", "Exchange Online", "Mimecast", "Freshservice", "Admin By Request", "Patch My PC", "Bluetally"],
   },
   {
     category: "Automation & Security",
-    skills: ["PowerShell", "Azure Automation", "Microsoft Defender", "BitLocker", "SSO Integrations"],
+    skills: ["PowerShell", "Python", "Azure Automation", "Azure Functions", "Torii", "Git / GitHub", "Microsoft Defender", "BitLocker", "SSO / SCIM", "VPN / Remote Access"],
   },
   {
     category: "Networking & Infrastructure",
     skills: ["Cisco Meraki", "Fortinet FortiGate", "Windows Server", "TCP/IP", "DNS", "DHCP"],
+  },
+  {
+    category: "AI & Productivity Platforms",
+    skills: ["Glean", "ChatGPT Enterprise", "Claude", "Lanai", "Confluence", "SharePoint", "Power BI"],
   },
 ];
 
