@@ -81,12 +81,12 @@ export default function DashboardPage() {
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
             I built my first homelab in 2018, just before graduating university, using used enterprise server parts sourced off eBay.
             What started as a way to self-host Plex, Radarr, and Sonarr on a few terabytes of storage has grown into a setup
-            I rely on daily — now running over 20 TB of data and a variety of services, VMs, and Docker containers.
+            I rely on daily, now running over 20 TB of data and a variety of services, VMs, and Docker containers.
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             The hardware has gone through four generations: an old laptop, used single-CPU server hardware, a dual-Xeon
             machine with 256 GB of RAM, and now a more power-efficient Intel Core i5 with 32 GB DDR4 running Unraid.
-            It&apos;s been a hands-on playground for learning infrastructure, networking, and self-hosted tooling — much of
+            It&apos;s been a hands-on playground for learning infrastructure, networking, and self-hosted tooling, much of
             which has directly shaped how I approach systems work professionally.
           </p>
         </section>

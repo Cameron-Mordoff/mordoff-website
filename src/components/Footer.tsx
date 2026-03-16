@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/resume", label: "Resume" },
   { href: "/projects", label: "Projects" },
   { href: "/dashboard", label: "Dashboard" },
@@ -25,7 +26,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-xs text-slate-400 dark:text-slate-500 max-w-xs leading-relaxed">
-              Senior Systems Administrator — endpoint management, automation, and self-hosted infrastructure.
+              Senior Systems Administrator specializing in endpoint management, automation, and self-hosted infrastructure.
             </p>
           </div>
 

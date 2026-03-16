@@ -17,7 +17,7 @@ const EXPERIENCE = [
       "Support enterprise onboarding/offboarding volume averaging ~35–40 onboardings/month and ~15 offboardings/month through automation-first workflows.",
       "Built and maintained Windows endpoint management foundation using Intune + Windows Autopilot, supporting standardized deployment, policy enforcement, and secure configurations.",
       "Developed and deployed Intune Proactive Remediation solution (Windows Update Health & Repair) to detect and repair unhealthy Windows Update states, improving patch reliability and reducing manual troubleshooting.",
-      "Designed and extended Exchange Online offboarding automation in Torii, building HTTP request workflow steps that trigger Azure Automation runbooks to assign mail forwarding, convert mailboxes to shared, and delegate manager access — reducing manual termination steps and access risk.",
+      "Designed and extended Exchange Online offboarding automation in Torii, building HTTP request workflow steps that trigger Azure Automation runbooks to assign mail forwarding, convert mailboxes to shared, and delegate manager access. This reduced manual termination steps and improved access risk management.",
       "Led improvements to email deliverability and security (SPF/DMARC troubleshooting and Mimecast cleanup), resolving business-impacting delivery failures.",
       "Led Admin By Request rollout and endpoint privilege hardening across Windows and macOS fleets, including company-wide change communications, vendor coordination, and Intune/Jamf deployment tuning.",
       "Served as primary technical owner for Lanai AI monitoring platform, leading deployment via Intune and Jamf, adapting vendor scripts for the R365 environment, and collaborating weekly with the Lanai team to resolve integration challenges.",
@@ -162,8 +162,8 @@ export default function ResumePage() {
             Senior Systems Administrator with 7+ years of experience supporting and scaling enterprise IT environments.
             Strong focus on automation, endpoint management, identity systems, and security operations. Skilled in
             Microsoft Intune, Windows Autopilot, Jamf, Entra ID (Azure AD), Microsoft 365, and Exchange Online. Known
-            for building reliable, repeatable workflows through PowerShell, Python, and Azure Automation — improving
-            compliance, reducing manual IT workload, and leading the onboarding and administration of enterprise AI
+            for building reliable, repeatable workflows through PowerShell, Python, and Azure Automation to improve
+            compliance, reduce manual IT workload, and lead the onboarding and administration of enterprise AI
             platforms including Glean, ChatGPT Enterprise, and Claude.
           </p>
         </div>
