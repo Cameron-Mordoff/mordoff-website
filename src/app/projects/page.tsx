@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Projects — Cameron Mordoff",
@@ -31,13 +32,16 @@ export default function ProjectsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
 
         {/* Page header */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">Projects</h1>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">Things I&apos;ve built and maintain</p>
-        </div>
+        <FadeIn>
+          <div className="mb-10">
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">Projects</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">Things I&apos;ve built and maintain</p>
+          </div>
+        </FadeIn>
 
         <div className="flex flex-col gap-4">
-          {PROJECTS.map((project) => (
+          {PROJECTS.map((project, i) => (
+            <FadeIn key={project.title} delay={i * 100}>
             <div
               key={project.title}
               className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40"
@@ -83,6 +87,7 @@ export default function ProjectsPage() {
                 ))}
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 

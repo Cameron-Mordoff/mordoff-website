@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "About — Cameron Mordoff",
@@ -13,12 +14,15 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
 
         {/* Header */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">About</h1>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">The person behind the terminal</p>
-        </div>
+        <FadeIn>
+          <div className="mb-10">
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">About</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">The person behind the terminal</p>
+          </div>
+        </FadeIn>
 
         {/* Intro card */}
+        <FadeIn delay={100}>
         <div className="flex flex-col sm:flex-row gap-8 items-start mb-10 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40">
           <div className="shrink-0 mx-auto sm:mx-0">
             <div className="w-32 h-32 rounded-2xl overflow-hidden border-2 border-cyan-500/30">
@@ -41,10 +45,12 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+        </FadeIn>
 
         {/* Story sections */}
         <div className="space-y-8">
 
+          <FadeIn delay={0}>
           <section className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40">
             <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-3">
               How I Got Here
@@ -62,7 +68,9 @@ export default function AboutPage() {
               PowerShell script or an Azure Automation runbook saves hours every week.
             </p>
           </section>
+          </FadeIn>
 
+          <FadeIn delay={100}>
           <section className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40">
             <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-3">
               What Drives Me
@@ -80,7 +88,9 @@ export default function AboutPage() {
               on how those tools work (and how to govern them) has become a big part of what I do.
             </p>
           </section>
+          </FadeIn>
 
+          <FadeIn delay={100}>
           <section className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40">
             <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-3">
               Outside of Work
@@ -99,7 +109,9 @@ export default function AboutPage() {
               </Link>.
             </p>
           </section>
+          </FadeIn>
 
+          <FadeIn delay={100}>
           <section className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40">
             <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-3">
               Where I&apos;m Headed
@@ -112,6 +124,7 @@ export default function AboutPage() {
               moves fast, and I like it that way.
             </p>
           </section>
+          </FadeIn>
 
         </div>
       </div>

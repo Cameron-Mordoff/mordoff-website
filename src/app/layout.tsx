@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import TerminalEgg from "@/components/TerminalEgg";
 
 export const metadata: Metadata = {
   title: "Cameron Mordoff — Systems Administrator",
@@ -33,7 +34,7 @@ export default function RootLayout({
         {/* Apply saved theme before first paint to prevent flash */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('theme')||'dark';if(t==='dark')document.documentElement.classList.add('dark');})()`,
+            __html: `(function(){var saved=localStorage.getItem('theme');var t=saved?saved:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark');})()`,
           }}
         />
       </head>
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Navbar />
           <main className="pt-16 flex-1">{children}</main>
           <Footer />
+          <TerminalEgg />
         </ThemeProvider>
       </body>
     </html>

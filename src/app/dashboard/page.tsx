@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Dashboard — Cameron Mordoff",
@@ -68,12 +69,15 @@ export default function DashboardPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
 
         {/* Page header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">Dashboard</h1>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">Live metrics from Andromeda</p>
-        </div>
+        <FadeIn>
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">Dashboard</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">Live metrics from Andromeda</p>
+          </div>
+        </FadeIn>
 
         {/* About */}
+        <FadeIn delay={100}>
         <section className="mb-10 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-3">
             About This Lab
@@ -90,6 +94,7 @@ export default function DashboardPage() {
             which has directly shaped how I approach systems work professionally.
           </p>
         </section>
+        </FadeIn>
 
         {/* Top section label + Grafana link */}
         <div className="flex items-center justify-between mb-4">
@@ -122,7 +127,8 @@ export default function DashboardPage() {
 
         {/* Grouped graph sections */}
         <div className="flex flex-col gap-8 mb-10">
-          {GRAFANA_SECTIONS.map((section) => (
+          {GRAFANA_SECTIONS.map((section, i) => (
+            <FadeIn key={section.heading} delay={i * 100}>
             <div key={section.heading}>
               <SectionHeading label={section.heading} />
               <div className="flex flex-col gap-4">
@@ -138,6 +144,7 @@ export default function DashboardPage() {
                 ))}
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 

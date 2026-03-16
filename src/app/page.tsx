@@ -11,18 +11,42 @@ export const metadata: Metadata = {
 const SKILL_GROUPS = [
   {
     category: "Endpoint & Identity",
+    color: "cyan",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
+      </svg>
+    ),
     skills: ["Microsoft Intune", "Windows Autopilot", "Jamf", "Entra ID (Azure AD)", "Microsoft 365", "Exchange Online", "Mimecast", "Freshservice", "Admin By Request", "Patch My PC", "Bluetally"],
   },
   {
     category: "Automation & Security",
+    color: "violet",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
     skills: ["PowerShell", "Python", "Azure Automation", "Azure Functions", "Torii", "Git / GitHub", "Microsoft Defender", "BitLocker", "SSO / SCIM", "VPN / Remote Access"],
   },
   {
     category: "Networking & Infrastructure",
+    color: "teal",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+      </svg>
+    ),
     skills: ["Cisco Meraki", "Fortinet FortiGate", "Windows Server", "TCP/IP", "DNS", "DHCP"],
   },
   {
     category: "AI & Productivity Platforms",
+    color: "amber",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+      </svg>
+    ),
     skills: ["Glean", "ChatGPT Enterprise", "Claude", "Lanai", "Confluence", "SharePoint", "Power BI"],
   },
 ];
@@ -136,28 +160,39 @@ export default function Home() {
               What I work with
             </h2>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {SKILL_GROUPS.map((group, i) => (
-              <FadeIn key={group.category} delay={i * 100}>
-              <div
-                className="p-5 rounded-xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60"
-              >
-                <p className="text-xs font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-3">
-                  {group.category}
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-xs"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              </FadeIn>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {SKILL_GROUPS.map((group, i) => {
+              const accent = {
+                cyan:   { card: "border-cyan-500/20 hover:border-cyan-500/40",   icon: "bg-cyan-500/10 border-cyan-500/20 text-cyan-500",   label: "text-cyan-600 dark:text-cyan-400",   tag: "bg-cyan-500/5 border-cyan-500/15 text-cyan-700 dark:text-cyan-300" },
+                violet: { card: "border-violet-500/20 hover:border-violet-500/40", icon: "bg-violet-500/10 border-violet-500/20 text-violet-500", label: "text-violet-600 dark:text-violet-400", tag: "bg-violet-500/5 border-violet-500/15 text-violet-700 dark:text-violet-300" },
+                teal:   { card: "border-teal-500/20 hover:border-teal-500/40",   icon: "bg-teal-500/10 border-teal-500/20 text-teal-500",   label: "text-teal-600 dark:text-teal-400",   tag: "bg-teal-500/5 border-teal-500/15 text-teal-700 dark:text-teal-300" },
+                amber:  { card: "border-amber-500/20 hover:border-amber-500/40",  icon: "bg-amber-500/10 border-amber-500/20 text-amber-500",  label: "text-amber-600 dark:text-amber-400",  tag: "bg-amber-500/5 border-amber-500/15 text-amber-700 dark:text-amber-300" },
+              }[group.color] ?? { card: "", icon: "", label: "", tag: "" };
+              return (
+                <FadeIn key={group.category} delay={i * 100}>
+                  <div className={`p-5 rounded-xl bg-white dark:bg-slate-800/40 border transition-colors ${accent.card}`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 ${accent.icon}`}>
+                        {group.icon}
+                      </div>
+                      <p className={`text-xs font-semibold uppercase tracking-widest ${accent.label}`}>
+                        {group.category}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {group.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className={`px-2.5 py-1 rounded-md border text-xs ${accent.tag}`}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>

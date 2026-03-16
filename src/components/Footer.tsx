@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: "/resume", label: "Resume" },
   { href: "/projects", label: "Projects" },
   { href: "/dashboard", label: "Dashboard" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
